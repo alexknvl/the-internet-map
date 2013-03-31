@@ -1,0 +1,281 @@
+BODY {  font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px; background: #FFFFFF; color: #000000; margin-top: 0px; margin-bottom: 0px; margin-right: 0px; margin-left: 0px; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px;}
+
+H1 {  font-size: 24px; font-weight: 600; font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; margin:0px; border: 0px; padding-top: 4px; padding-bottom:4px;}
+
+H2 {  font-size: 20px; font-weight: 600; font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; margin: 0px; border: 0px; padding-top: 4px; padding-bottom:4px;}
+
+H3 {  font-size: 16px; font-weight: 600; font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; margin:0px; border: 0px; padding-top: 5px; padding-bottom:5px;}
+
+#H3.probe {  font-size: 18px; font-weight: 600; font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; margin-top:40px; border: 0px; padding: 0px; color: rgb(0,43,130); border-bottom: solid 1pt #ACACAC; line-height:1; }
+H3.probe {  font-size: 18px; font-weight: 600; font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; margin-top:20px; border: 0px; padding: 0px; color:#3A5ACD; border-bottom: solid 1pt #ACACAC; line-height:1; }
+
+H4 {  font-size: 14px; font-weight: 500; font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; margin:0px; border: 0px; padding: 0px;}
+
+P {  font-family: Verdana, "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px; bottom:0px; top:0px;}
+
+B {  font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px; font-weight: 600;}
+
+B.profile {  font-family: Verdana, "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 16px; color: black; font-weight:600;}
+
+TD { font-family: Verdana, "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px;}
+TD.visitors { font-family: Verdana, "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 10px;}
+TD.probe { font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 10px;}
+TD.nslookup { font-family: "OpenSansSerif","Open Sans", Arial, sans-serif; font-size: 14px; color:blue; font-weight:500; }
+
+TH { font-family: Verdana; font-size: 14px; font-weight: 500;}
+
+TH.probe { font-family: "OpenSansSerif","Open Sans",Arial,sans-serif; font-size: 14px; font-weight: 500; background:#800000; color:white; }
+TH.probe2 { font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 18px; font-weight: 500; background:#800000; color:white; text-align:left;}
+
+#a:link {  color: brown;}
+#a:visited {  color: brown;}
+#a:active {  color: #888888;}
+#a:hover {  color: #888888;}
+
+A {  font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px; color: brown;}
+A.name {  font-family: Verdana, "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px; bottom:0px; top:0px;}
+A.doclink {  font-family: "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px; color: brown; padding-top:5px; }
+
+UL {  font-family: Verdana, "OpenSansSerif","Open Sans",Arial, sans-serif; font-size: 12px; font-style: normal; color: #000000; padding-top:0px; margin-top:0px; margin-bottom:0px;}
+
+LI { padding:0px; }
+
+.maroontable {  font-family: "OpenSansSerif","Open Sans", Arial, sans-serif; font-size: 12px; color: #FFFFFF;}
+
+INPUT {
+	font-family: "OpenSansSerif","Open Sans",Arial, sans-serif;
+	font-size: 12px; 
+	-moz-border-radius:5px; /* Firefox */ 
+	-webkit-border-radius: 5px; /* Safari, Chrome */ 
+	-khtml-border-radius: 5px; /* KHTML */ border-radius: 5px; /* CSS3 */ 
+}
+TEXTAREA {font-family: "OpenSansSerif","Open Sans",Arial,sans-serif;font-size: 12px;width: 500px;}
+BLOCKQUOTE { margin-left: 10px; margin-right: 10px; padding-left: 0px; padding-right: 0px;}
+
+.nav {font-family: "OpenSansSerif","Open Sans", Arial, sans-serif;font-size: 8pt;}
+
+
+pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	width: 800px;
+	margin: 25px;
+	overflow: auto;
+	padding: 5pt;
+	font-family: courier, monospace;
+	white-space:pre;
+	/* begin css 3 or browser specific rules - do not remove!
+	see: http://forums.techguy.org/archive/index.php/t-249849.html */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    /* end css 3 or browser specific rules */
+}
+
+pre:hover {
+	background:#F3F5F7 repeat-y 0 0;border:1px solid #FFC
+}
+
+* html pre {padding-bottom:25px;overflow-y:hidden;overflow:visible;overflow-x:auto}
+
+*:first-child+html pre {padding-bottom:25px;overflow-y:hidden;overflow:visible;overflow-x:auto}
+
+
+pre.black {
+ background-color: #111;
+ border: 1px solid #CC3300;
+ color: #ddd;
+ font-family: courier, courier new, monospace;
+ font-size: 14px;
+ line-height: 19px;
+ margin: 10px 10px 10px 60px;
+ width: 800px;
+ padding: 15px;
+}
+
+code { font-family: Courier, "Courier New", monospace; line-height: 1em; background: #eee; }
+
+pre.php {
+ background-color: #eeeeee;
+ border: 1px solid #999999;
+ color: #000000;
+ font-family: courier, courier new, monospace;
+ font-size: 12px;
+ width:600px;
+}
+
+PRE.tsql
+{
+  width: 870px;
+  float: none;
+  clear: none;
+  overflow: visible;
+  font-size: 12px;
+  line-height: 1.333;
+  background-color: #eeeeee;
+  margin: 10px 10px 10px 40px;
+}
+
+		ul.cheat_sheet_downloads {
+			background: #DBCDB0 url('http://networking.ringofsaturn.com/Web/cheat_sheet_download_arrow.png') 10px top no-repeat;
+			width: 250px;
+			margin: 2px;
+			padding: 10px;
+		}
+
+			ul.cheat_sheet_downloads li {
+				color: #fff;
+				background: none;
+				margin-left: 55px;
+			}
+
+			ul.cheat_sheet_downloads li a {
+			}
+
+
+td.Dd {
+	font-size: 12pt;
+	letter-spacing: 2px;
+	margin: 10pt;
+	padding: 10pt;
+	background-color: #eeeeee;
+	text-align: center;
+	border-style: solid;
+	border-width: 1pt;
+	border-color: #666666;
+	font-weight:bold;
+}
+td.Dh {
+	font-size: 12pt;
+	letter-spacing: 2px;
+	padding: 3px;
+	background-color: #eeeeee;
+	text-align: center;
+}
+td.Dn {
+	font-size: 10pt;
+	padding: 2px;
+	background-color: #eeeeee;
+	text-align: center;
+}
+td.Dm {
+	font-size: 6pt;
+	padding: 2px;
+	background-color: #eeeeee;
+	text-align: center;
+}
+td.De {
+	font-size: 10pt;
+	padding: 3px;
+	background-color: #ffdd66;
+	text-align: center;
+	border-style: outset;
+	border-width: 1px;
+}
+td.Dt {
+	font-size: 10pt;
+	padding: 3px;
+	background-color: #dddd99;
+	text-align: center;
+	border-style: outset;
+	border-width: 1px;
+}
+
+td.Du {
+	font-size: 12pt;
+	font-weight: bold;
+	padding: 3px;
+}
+
+td.Ds {
+	font-size: 10pt;
+	padding: 0px;
+	background-color: transparent;
+}
+td.Db {
+	font-size: 6pt;
+	padding: 0px;
+	background-color: transparent;
+}
+
+td.swTe {
+	font-size: 10pt;
+	padding: 2px;
+	background-color: transparent;
+}
+td.swTr {
+	font-size: 10pt;
+	padding: 2px;
+	background-color: #dddd99;
+}
+td.swTl {
+	font-size: 6pt;
+	padding: 2px;
+	background-color: #eeeeee;
+}
+
+td.padName {
+	margin: 2pt;
+}
+
+td.padLets, td.padDig, span.padDig, span.padLets {
+	text-align: center;
+	font-family: "OpenSansSerif","Open Sans", Arial, sans-serif;
+	font-weight: bold;
+}
+
+td.padLets {
+	margin: 2pt;
+	padding: 2pt;
+	background-color: #ffdd66;
+	font-size: 10;
+	color: #333333; 
+}
+
+td.padDig {
+	margin: 12pt;
+	font-size: 12;
+	color: #666666; 
+	background-color: #eeeeee;
+}
+
+span.pnEmph {
+	font-weight: bold;
+	color: #ff0000; 
+}
+
+span.padDig {
+	margin: 6pt;
+	font-size: 12;
+	color: #666666; 
+}
+
+span.padLets {
+	margin: 6pt;
+	font-size: 10;
+	color: #333333; 
+}
+
+td.padKey {
+	margin: 2pt;
+	background-color: #ececff;
+	border-style: outset;
+	border-width: 1px;
+	border-color: #6666cc;
+	text-align: center;
+}
+
+table.feTa {
+	padding: 0pt;
+	text-align: center;
+}
+
+td.padKey {
+	margin: 2pt;
+	background-color: #ececff;
+	border-style: outset;
+	border-width: 1px;
+	border-color: #6666cc;
+	text-align: center;
+}
+
+

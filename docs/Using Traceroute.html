@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0055)http://networking.ringofsaturn.com/IP/traceroutedoc.php -->
+<html lang="en" style="display: block;"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Using Traceroute</title>
+<link rel="SHORTCUT ICON" href="http://networking.ringofsaturn.com/favicon.ico">
+<link href="./Using Traceroute_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Using Traceroute_files/Style.css" type="text/css">
+<link rel="shortcut icon" href="http://networking.ringofsaturn.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://networking.ringofsaturn.com/apple-touch-icon-iphone.png">
+<link rel="apple-touch-icon-precomposed" href="http://networking.ringofsaturn.com/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://networking.ringofsaturn.com/apple-touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://networking.ringofsaturn.com/apple-touch-icon-iphone4.png">
+<meta http-equiv="Content-Type" content="text/html;">
+<meta name="description" content="Using" traceroute="">
+<meta name="keywords" content="Documents and tools based on internet technology, including certifications, Cisco, Juniper, Protocols, IP, Personal Computers, PC, Microsoft SQL Server, MySQL, Security, Telecommunications, Unix, Linux, FreeBSD, Web, PHP, Perl, Regular Expressions, Regex">
+<script src="./Using Traceroute_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Using Traceroute_files/ga.js"></script><script type="text/javascript" src="./Using Traceroute_files/jquery-1.4.2.min.js"></script><style type="text/css"></style>
+<style>html { display: none}</style>
+<script type="text/javascript">
+if (self == top) {
+	document.documentElement.style.display = 'block';
+} else {
+	top.location = self.location;
+}
+</script>
+
+<script language="JavaScript">
+<!-- Hide script from old browsers
+ 
+function openWindow(URL,WIDTH,HEIGHT)
+{
+        window.open(URL,'Window','width=' +WIDTH+ ',height=' +HEIGHT+ ',directories=no,status=no,scrollbars=yes,resize=yes,menubar=no');
+}
+ 
+function openWindow2(URL,WIDTH,HEIGHT)
+{
+        window.open(URL,'Window','width=' +WIDTH+ ',height=' +HEIGHT+ ',directories=no,status=no,scrollbars=no,resize=yes,menubar=no');
+}
+
+var $j = jQuery.noConflict();
+$j("pre").hover(function() {
+	var codeInnerWidth = $j("code", this).width() + 10;
+    if (codeInnerWidth > 563) {
+		$j(this)
+			.stop(true, false)
+			.css({
+				zIndex: "100",
+				position: "relative"
+			})
+			.animate({
+				width: codeInnerWidth + "px"
+			});
+		}
+	}, function() {
+			$j(this).stop(true, false).animate({
+				width: 563
+		});
+	});
+ 
+//-->
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4774854-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head><style type="text/css"></style>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<table width="100%" cols="2" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td colspan="3" width="100%">
+<table width="100%"><tbody><tr>
+<td align="LEFT" valign="TOP"><b><font color="#770000" size="5">Using Traceroute<br><a href="http://networking.ringofsaturn.com/">Home</a></font></b></td>
+<td>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5890178766164948";
+/* Header Bar */
+google_ad_slot = "8576835117";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td>
+<td align="RIGHT">
+<!-- SEARCH -->
+<form method="get" action="http://networking.ringofsaturn.com/search.php">
+Search Website:
+	<input type="hidden" name="ul" value="networking.ringofsaturn.com">
+      <input type="search" name="q" value="" size="25">
+      <!--<small><a href="?form=extended&amp;ul=networking.ringofsaturn.com&amp;qprev=">Extended</a></small>-->
+</form>
+</td>
+</tr></tbody></table>
+</td>
+</tr>
+<tr>
+<td colspan="3" width="100%">
+<img border="0" align="ABSTOP" src="./Using Traceroute_files/menu_top.gif" height="8" width="100%">
+</td>
+</tr>
+<tr>
+<td width="190" valign="TOP" background="./Using Traceroute_files/striped_bg.gif" height="100%" align="RIGHT" colspan="1" style="padding:6px">
+<a href="http://networking.ringofsaturn.com/Certifications" alt="Certifications"><img src="./Using Traceroute_files/Certifications.gif" border="0" width="50"><br><b>Certifications</b></a><br>
+<a href="http://networking.ringofsaturn.com/Cisco" alt="Cisco"><img src="./Using Traceroute_files/Cisco.gif" border="0" width="50"><br><b>Cisco</b></a><br>
+<a href="http://networking.ringofsaturn.com/IP" alt="IP"><img src="./Using Traceroute_files/IP.gif" border="0" width="50"><br><b>IP</b></a><br>
+<a href="http://networking.ringofsaturn.com/PC" alt="PC"><img src="./Using Traceroute_files/PC.gif" border="0" width="50"><br><b>PC</b></a><br>
+<a href="http://networking.ringofsaturn.com/Protocols" alt="Protocols"><img src="./Using Traceroute_files/Protocols.gif" border="0" width="50"><br><b>Protocols</b></a><br>
+<a href="http://networking.ringofsaturn.com/Routers" alt="Routers"><img src="./Using Traceroute_files/Routers.gif" border="0" width="50"><br><b>Routers</b></a><br>
+<a href="http://networking.ringofsaturn.com/SQL" alt="SQL"><img src="./Using Traceroute_files/SQL.gif" border="0" width="50"><br><b>SQL</b></a><br>
+<a href="http://networking.ringofsaturn.com/Security" alt="Security"><img src="./Using Traceroute_files/Security.gif" border="0" width="50"><br><b>Security</b></a><br>
+<a href="http://networking.ringofsaturn.com/Telecommunications" alt="Telecommunications"><img src="./Using Traceroute_files/Telecommunications.gif" border="0" width="50"><br><b>Telecommunications</b></a><br>
+<a href="http://networking.ringofsaturn.com/Tools" alt="Tools"><img src="./Using Traceroute_files/Tools.gif" border="0" width="50"><br><b>Tools</b></a><br>
+<a href="http://networking.ringofsaturn.com/Unix" alt="Unix"><img src="./Using Traceroute_files/Unix.gif" border="0" width="50"><br><b>Unix</b></a><br>
+<a href="http://networking.ringofsaturn.com/Web" alt="Web"><img src="./Using Traceroute_files/Web.gif" border="0" width="50"><br><b>Web</b></a><br>
+<br><br><br>
+<br><br>
+</td>
+<td bgcolor="#AAAAAA" height="100%" width="1" background="./Using Traceroute_files/spacer.gif"></td>
+<td valign="TOP" colspan="1" width="90%" style="padding:4px">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5890178766164948";
+/* 728x90, created 2/21/09 */
+google_ad_slot = "6448900595";
+google_ad_width = 750;
+google_ad_height = 100;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!--<A HREF="https://www.plimus.com/jsp/redirect.jsp?contractId=2922412&referrer=rnejdl"><IMG SRC="/images/pcfix728x90.gif" BORDER=0></A>-->
+<div style="float:right; vertical-align:bottom;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5890178766164948";
+/* 160x600, created 10/27/10 */
+google_ad_slot = "4987623332";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<br>
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="./Using Traceroute_files/plusone.js" gapi_processed="true"></script>
+<!-- Place this tag where you want the +1 button to render -->
+<div style="height: 24px; width: 106px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1357848311324" name="I0_1357848311324" src="./Using Traceroute_files/fastbutton.html" allowtransparency="true" data-gapiattached="true" title="+1"></iframe></div>
+<h2>Using Traceroute</h2>
+<hr noshade="" color="#993300" width="80%">
+<a href="http://networking.ringofsaturn.com/IP/traceroutedoc.php#_work">How Does it Work?</a><br>
+<a href="http://networking.ringofsaturn.com/IP/traceroutedoc.php#_whohosts">Understanding the Route</a><br>
+<a href="http://networking.ringofsaturn.com/IP/traceroutedoc.php#_caveats">Caveats and Quirks</a><br>
+<a href="http://networking.ringofsaturn.com/IP/traceroutedoc.php#_routing">Tracking Down Network Problems</a><br>
+<a href="http://networking.ringofsaturn.com/IP/traceroutedoc.php#_slowless">Debugging Network Slowdowns</a><br>
+<a href="http://networking.ringofsaturn.com/IP/traceroutedoc.php#_exercises">Exercises and Quiz</a><br>
+<a href="http://networking.ringofsaturn.com/Tools/traceroute.php">Online Traceroute Tool</a><br>
+<a href="http://nitrous.digex.net/">nitrous.digex.net</a><br>
+<br>
+<p>Traceroute is a very handy tool written by &gt;Van Jacobson that can show you the route that packets take from one host to another. It can also be used sometimes to help debug network problems, if you know how to interpret its results.</p>
+<a name="_work"></a>
+<h3>How Does it Work?</h3>
+<p>Every IP packet can specify how many hops it can go through before it is no longer forwarded on. When a packet is no longer forwarded on, that router just forgets all about it, but it also will usually send out a message to the source host saying, "Hey, sorry, but your packet died here." So, traceroute cleverly manipulates these values so that the first round of packets it sends out to the designated host are specified such that they can only go through one hop before dying. So that first hop gets those packets, sees that it's not supposed to forward them on any further and doesn't, and then sends a message back to the source host telling it that the packets died. When traceroute receives the "your packets died here" message from the router, it knows that's the first hop. It then sends on the second round of packets specifying that they can only go through two hops, and the cycle continues. It finishes when it gets a response from the final destination. For each hop, traceroute then displays the RTT, Round Trip Time, or the time difference between when the probe was sent from traceroute and the time the response arrived for each packet.</p>
+<br>
+<p>Let's take a look at an example traceroute:</p>
+<pre>[onyx]:[3:30am]:[/home/rnejdl] &gt; traceroute www.neo.com
+traceroute to www.neo.com (209.151.241.200), 30 hops max, 40 byte packets
+ 1  border1 (209.39.6.1)  2.053 ms  2.054 ms  2.322 ms
+ 2  host-c-129.vcso.verio.net (207.55.203.129)  3.644 ms  1.195 ms  1.180 ms
+ 3  int1-s1-0.dlls.tx.verio.net (199.1.162.153)  1.810 ms  1.795 ms  1.828 ms
+ 4  ge-5-0-0.a10.dllstx01.us.ra.verio.net (199.1.141.10)  2.125 ms  2.070 ms  2.020 ms
+ 5  ge-6-0.r00.dllstx01.us.bb.verio.net (129.250.31.49)  1.975 ms  1.969 ms  2.013 ms
+ 6  ATM3-0.BR1.DFW9.ALTER.NET (137.39.23.221)  3.269 ms  3.175 ms  2.989 ms
+ 7  140.at-5-0-0.XR2.DFW9.ALTER.NET (152.63.98.134)  3.583 ms  3.342 ms  3.167 ms
+ 8  184.at-2-0-0.TR2.DFW9.ALTER.NET (152.63.98.50)  3.483 ms  3.249 ms  3.448 ms
+ 9  128.at-5-1-0.TR2.LAX9.ALTER.NET (152.63.0.230)  35.689 ms  35.958 ms  35.937 ms
+10  196.ATM6-0.XR2.LAX4.ALTER.NET (152.63.112.185)  38.666 ms  38.775 ms  38.837 ms
+11  192.ATM4-0.GW6.LAX4.ALTER.NET (152.63.113.149)  38.846 ms  38.879 ms  39.045 ms
+12  softawareoc3-gw.customer.alter.net (157.130.200.214)  34.409 ms  34.260 ms 34.437 ms
+13  newDuke-p1.softaware.com (209.85.0.2)  34.901 ms  35.183 ms  35.111 ms
+14  stonewall.softaware.com (206.83.165.222)  35.395 ms  35.748 ms  35.395 ms
+15  flint-softaware.mla.cyberverse.net (209.85.63.254)  42.941 ms  37.415 ms  50.875 ms
+16  tucker.mla.cyberverse.net (209.151.224.66)  56.009 ms  62.434 ms  47.725 ms
+17  neon.neo.com (209.151.241.200)  98.993 ms  76.639 ms  72.790 ms
+[onyx]:[3:30am]:[/home/rnejdl] &gt;
+</pre>
+<p>From this traceroute, you can see that it took 17 hops to go from onyx.training.verio.net to www.neo.com and that the round trip time was roughly 72-98 ms (based on the 3 numbers on the last line). Keep in mind that the RTT's reported are the round trip times from the source host to that router hop. It's not a cumulative sum of the previous times. Each hop is going to add some time to the path, so you'd expect each hop to take a little bit more time to get to than the last. Looking at this example, you can see that this is pretty much the case here, except for slight fluctuations on the orders of milliseconds due to network traffic.</p>
+<br>
+<p>Now an important thing to know when using traceroute is what the asterisks/stars mean. If you see traceroute print out a star instead of a round trip time, that means that either your probe packet got dropped, or the reply back to you for that probe got lost along the way. This is usually referred to as "packet loss," and we will discuss this later.</p>
+<br>
+<a name="_whohosts"></a><h3>Understanding the Route</h3>
+<p>To understand how to interpret a route, you will need to know a little bit about interpretting reverse DNS. When ever a traceroute is done, the program will look up the reverse DNS of each host as it goes and print that information as part of each line. This can help to give you clues as to each network that a packet goes through when it travels from you to the final destination. Let's go through an example and show how to interpret it.</p>
+<pre>[onyx]:[4:07am]:[/home/rnejdl] &gt; traceroute www.idsoftware.com
+traceroute to charon.idsoftware.com (192.246.40.185), 30 hops max, 40 byte packets
+ 1  border1 (209.39.6.1)  2.103 ms  1.995 ms  2.407 ms
+ 2  host-c-129.vcso.verio.net (207.55.203.129)  1.324 ms  1.158 ms  1.169 ms
+ 3  int1-s1-0.dlls.tx.verio.net (199.1.162.153)  1.827 ms  1.866 ms  1.858 ms
+ 4  ge-5-0-0.a10.dllstx01.us.ra.verio.net (199.1.141.10)  2.136 ms  2.084 ms  2.097 ms
+ 5  ge-6-0.r00.dllstx01.us.bb.verio.net (129.250.31.49)  2.056 ms  1.954 ms  1.981 ms
+ 6  ATM3-0.BR1.DFW9.ALTER.NET (137.39.23.221)  3.122 ms  3.078 ms  3.344 ms
+ 7  140.at-6-0-0.XR2.DFW9.ALTER.NET (152.63.98.130)  3.260 ms  3.507 ms  3.330 ms
+ 8  284.ATM7-0.XR2.DFW4.ALTER.NET (152.63.96.165)  4.436 ms  4.342 ms  4.306 ms
+ 9  194.ATM9-0-0.GW1.DFW1.ALTER.NET (146.188.240.45)  5.085 ms  4.628 ms  5.285 ms
+10  savvis-dfw-gw.customer.ALTER.NET (157.130.128.54)  5.571 ms  5.964 ms  5.462 ms
+11  idsoft-1.CR-1.usdlls.savvis.net (209.176.32.178)  11.800 ms  9.365 ms  10.870 ms
+12  charon.idsoftware.com (192.246.40.185)  10.687 ms  9.927 ms  11.687 ms
+[onyx]:[4:07am]:[/home/rnejdl] &gt;
+</pre>
+<p>In this example, we have tracerouted to www.idsoftware.com from a host within Verio's network. We can now analyze each hop along the way.</p>
+<ol>
+  <li><b>border1</b> is the router for the this network.</li>
+  <li><b>host-c-129.vcso.verio.net</b> is the router that provides connectivity for the entire 8700 location.</li>
+  <li><b>int1-s1-0.dlls.tx.verio.net</b> is Serial 1/0 on the router dlls.tx.verio.net, the other side of the T3 between the 8700 location and the Infomart.</li>
+  <li><b>ge-5-0-0.a10.dllstx01.us.ra.verio.net</b> is the Gigabit Ethernet Interface 5/0/0 on a10.dllstx.01.us.ra.verio.net.</li>
+  <li><b>ge-6-0.r00.dllstx01.us.ra.verio.net</b> is another Gigabit Ethernet Interface on a different router within the same location, the Infomart. This router handles our peering for Verio in Dallas.</li>
+  <li><b>ATM3-0.BRI.DFW9.ALTER.NET</b> is Alter.net's router that peers directly with Verio in Dallas.</li>
+  <li><b>140.at-6-0-0.XR2.DFW9.ALTER.NET</b> is an ATM connection on another router with the Dallas/Fort Worth area.</li>
+  <li><b>284.ATM7-0.XR2.DFW4.ALTER.NET</b> is another ATM connection in the Dallas/Fort Worth area.</li>
+  <li><b>194.ATM9-0-0.GW1.DFW1.ALTER.NET</b> is yet another ATM connection on a different router within Alter.net's network in Dallas/Fort Worth.</li>
+  <li><b>savvis-dfw-gw.customer.ALTER.NET</b> is the serial IP savvis.net's router that connects to Alter.net's network.</li>
+  <li><b>idsoft-1.CR-1.usdlls.savvis.net</b> is Id Software's serial IP for their router that connects to savvis.net's network. It appears that ID Software is a customer of savvis.net.</li>
+  <li><b>charon.idsoftware.com</b> is the actual name of the machine where www.idsoftware.com's website is hosted.</li>
+</ol>
+<p>From this traceroute, we can tell that www.idsoftware.com is hosted by ID software themselves in the Dallas/Fort Worth metroplex. We also know that ID Software is a customer of savvis.net, who is in turn a customer of Alter.net.</p>
+<br>
+<p>Let's look at another traceroute:</p>
+<br>
+<pre>[onyx]:[4:07am]:[/home/rnejdl] &gt; traceroute www.7up.com
+traceroute to 7up.com (192.41.37.40), 30 hops max, 40 byte packets
+ 1  border1 (209.39.6.1)  2.093 ms  2.019 ms  2.336 ms
+ 2  host-c-129.vcso.verio.net (207.55.203.129)  3.700 ms  1.171 ms  1.193 ms
+ 3  int1-s1-0.dlls.tx.verio.net (199.1.162.153)  1.810 ms  1.883 ms  1.856 ms
+ 4  ge-5-0-0.a10.dllstx01.us.ra.verio.net (199.1.141.10)  2.144 ms  2.113 ms  2.027 ms
+ 5  ge-6-0-0.r01.dllstx01.us.bb.verio.net (129.250.28.190)  2.096 ms  2.070 ms 2.176 ms
+ 6  p1-0-0-0.r01.oremut01.us.bb.verio.net (129.250.2.41)  59.328 ms  59.354 ms 59.319 ms
+ 7  pvu1.vwhpvu1.verio.net (129.250.29.202)  59.516 ms  60.039 ms  59.890 ms
+ 8  7up.com (192.41.37.40)  60.132 ms  60.405 ms  60.496 ms
+[onyx]:[4:11am]:[/home/rnejdl] &gt;
+</pre>
+<p>This traceroute follows much the same path as the last one up to hop 5. Hop 6 is the Verio router in Orem, Utah that Iserver uses. The router on hop 7, <b>pvu1.vwhpvu1.verio.net</b> is the border router (the router that connects Iserver to the Verio backbone) for Iserver. Finally, we can see that www.7up.com is hosted on an Iserver platform.</p>
+<br>
+<p>We will look at one more traceroute that shows another example of what you might see.</p>
+<br>
+<pre>[onyx]:[4:22am]:[/home/rnejdl] &gt; traceroute www.hellers.com
+traceroute to www.hellers.com (207.197.221.102), 30 hops max, 40 byte packets
+ 1  border1 (209.39.6.1)  3.743 ms  2.090 ms  2.430 ms
+ 2  host-c-129.vcso.verio.net (207.55.203.129)  1.351 ms  1.187 ms  1.126 ms
+ 3  int1-s1-0.dlls.tx.verio.net (199.1.162.153)  1.810 ms  1.801 ms  1.810 ms
+ 4  ge-5-0-0.a10.dllstx01.us.ra.verio.net (199.1.141.10)  2.132 ms  2.070 ms  2.022 ms
+ 5  ge-6-0.r00.dllstx01.us.bb.verio.net (129.250.31.49)  2.143 ms  2.231 ms  2.022 ms
+ 6  p1-1-0-2.r03.mclnva01.us.bb.verio.net (129.250.2.210)  45.922 ms  45.934 ms 45.967 ms
+ 7  p4-0-1.r00.mclnva02.us.bb.verio.net (129.250.2.62)  45.999 ms  45.979 ms  45.805 ms
+ 8  fa-3-0-0.a06.vinnva01.us.ra.verio.net (129.250.30.165)  46.159 ms  46.191 ms 46.215 ms
+ 9  fa-0.n01.vinnva01.us.ra.verio.net (207.22.81.103)  47.217 ms  46.802 ms  46.860 ms
+10  router.hellers.com (207.197.221.1)  73.894 ms  73.852 ms  74.150 ms
+11  dybbuk.hellers.com (207.197.221.3)  85.513 ms *  75.824 ms
+[onyx]:[4:22am]:[/home/rnejdl] &gt;
+</pre>
+<br>
+<p>This last traceroute is to <b>www.hellers.com</b>. This website is hosted on the Verio network, however, it is hosted by a customer of Verio's, so is not Verio's responsibility, other than maintaining connectivity.</p>
+<br>
+<a name="_caveats"></a><h3>Caveats and Quirks</h3>
+<p>Before we continue on, there are a couple little caveats to using traceroute that you should be aware of, so you don't accidently misinterpret the results.</p>
+<br>
+<p>The first caveat to be aware of is that sometimes it will look like the last hop on a traceroute dropped a packet, when it really didn't. This is due to both the fact that this host is the actual final destination of your traceroute probes, and how certain Operating Systems handle ICMP. (ICMP, Internet Control Message Protocol, is one protocol that machines on the Internet use to send messages to each other, and the "Your packet died here" message that traceroute relies on is an ICMP message.) Since the last hop is your destination, instead of that host sending you back an ICMP message saying "Sorry your packet died here," that host will send back a different ICMP message saying "Hi, your packet made it here, but this port is unreachable." This is because traceroute purposefully sets the probe packet's destination to be some large port number that will most likely be unreachable at the destination host because it <i>wants</i> to receive that "port unreachable" message back. The caveat here has to do with the fact that some OS's, such as IOS (which Cisco routers run) and <a href="http://www.sun.com/solaris" target="_NEW">Sun Solaris</a>, purposefully drop ICMP responses like "port unreachable" if it gets too many of them in a short period of time. They do this presumably as a security precaution. So, if you were to add in more delay between probes, you wouldn't see this erroneous packet loss.</p>
+<br>
+<p>Another caveat of traceroute is that ICMP, which is the protocol traceroute relies on to get responses from each hop, is usually the lowest priority protocol. So if one router is really busy it might decide to drop ICMP messages, and you will see lots of packet loss, but that router might be forwarding on more common, higher priority traffic just fine.</p>
+<br>
+<p>Also, some sites will filter ICMP for various reasons, so it might appear in a traceroute that a site might be unreachable, but in fact it is reachable.</p>
+<br>
+<p><a name="_routing"></a></p><h3>Tracking Down Network Problems</h3>
+<p>So now that you have a basic understanding of traceroute, it's time to learn how to use traceroute to track down network problems. The first kind of network problem that traceroute can help you debug would be a loss or lack of connectivity to a site. If you appear to be having problems reaching a remote site, like a web site, do a traceroute to that site. If the traceroute reaches that site fine, then chances are that you have connectivity to the host, but that the web server on that host crashed. But, if the packets start to die somewhere along the path, it's likely that some router along the way, or the host itself is down. Here is an example traceroute:</p>
+<pre>traceroute to 209.0.0.210 (209.0.0.210): 1-30 hops, 38 byte packets
+1  SF-rt5-fe9-0.geo.net (166.90.6.1)  0.48 ms  0.440 ms  0.378 ms
+2  SF-core1-h1.geo.net (166.90.1.17)  0.618 ms  0.571 ms  0.521 ms
+3  SF-rt2-f0.geo.net (166.90.5.7)  1.19 ms  1.94 ms  1.13 ms
+4  *  *  *
+5  *  *  *
+</pre>
+<p>Just remember that such a traceroute can also be an example of a firewall that is filtering packets, or a router that throws away the kinds of packets that traceroute depends on when it gets overloaded.</p>
+<br>
+<a name="_slowness"></a><h3>Debugging Network Slowdowns</h3>
+<p>Using traceroute's results to see what hops IP packets take from you to a remote host is really straight forward. However, using traceroute's results to debug where "slowness" occurs in a link is fairly tricky for a number of different reasons. The first of which is the fact that traceroute only shows you the hops from you to a remote host, not the hops from the remote host to you. So, the best way to determine where network slowness is occurring is to do a traceroute from host A to host B, and then another traceroute from host B back to host A. By looking at both, a trained eye can usually get a pretty good idea where the network slowness is occurring. This is due to the fact that pretty much every Tier1 ISP on the Internet uses closest-exit routing which often results in asymmetric routes (completely different routes from host A to B than from host B to A).</p>
+<br>
+<p>For instance, host A might be on the west coast using ISP X, and host B might be on the east coast using ISP Y. The path from host A to host B will then probably exit ISP X as soon as it can, most likely at some peering point on the west coast and enter ISP Y's network from there onto host B. Conversely, the path from host B to host A will most likely exit ISP Y's network as soon as it can on the east coast, and enter ISP X's network and continue on to host A.</p>
+<br>
+<p>Here's an example:</p>
+<pre>traceroute to web-proxy.geo.net (166.90.90.163)
+ 1  E40-RTR-E40-SERVER72-ETHER.MIT.EDU (18.72.0.1)  4 ms  4 ms  4 ms
+ 2  EXTERNAL-RTR-FDDI.MIT.EDU (18.168.0.12)  4 ms  4 ms  4 ms
+ 3  cambridge2-br2.bbnplanet.net (192.233.33.6)  4 ms  4 ms  4 ms
+ 4  cambridge1-br1.bbnplanet.net (4.0.2.25)  4 ms  78 ms  105 ms
+ 5  nyc1-br2.bbnplanet.net (4.0.2.85)  12 ms  12 ms  12 ms
+ 6  nynap.bbnplanet.net (4.0.1.26)  12 ms  12 ms  16 ms
+ 7  sprint-nap.geo.net (192.157.69.43)  94 ms  82 ms  74 ms
+ 8  SF-rt5-a1.geo.net (166.90.4.33)  70 ms  78 ms  74 ms
+ 9  SF-core1-h1.geo.net (166.90.1.17)  82 ms  78 ms  74 ms
+10  SF-rt2-f0.geo.net (166.90.5.7)  273 ms  234 ms  98 ms
+11  web-proxy.geo.net (166.90.90.163)  133 ms  90 ms  82 ms
+
+traceroute to BIG-SCREW.MIT.EDU (18.72.0.176), 30 hops max, 40 byte packets
+ 1  SF-rt2-f2.geo.net (166.90.2.13)  1.218 ms  1.219 ms  1.479 ms
+ 2  SF-core1-f0.geo.net (166.90.5.4)  0.704 ms  0.68 ms  0.678 ms
+ 3  MAE-West-h0.geo.net (166.90.1.34)  3.926 ms  3.402 ms  4.285 ms
+ 4  sanjose1-br1.bbnplanet.net (198.32.184.19)  5.071 ms  4.839 ms  6.973 ms
+ 5  su-bfr.bbnplanet.net (4.0.1.10)  6.695 ms  6 ms  8.342 ms
+ 6  chicago1-br2.bbnplanet.net (4.0.3.165)  71.597 ms  70.278 ms  70.166 ms
+ 7  boston1-br1.bbnplanet.net (4.0.2.245)  76.612 ms 74.881 ms 75.66 ms
+ 8  boston1-br2.bbnplanet.net (4.0.2.250)  74.099 ms  77.012 ms  76.715 ms
+ 9  cambridge2-br1.bbnplanet.net (4.0.1.186)  75.399 ms  75.376 ms  74.932 ms
+10  ihtfp.mit.edu (192.233.33.3)  78.895 ms  76.066 ms  76.434 ms
+11  E40-RTR-FDDI.MIT.EDU (18.168.0.11)  77.556 ms  76.115 ms  75.627 ms
+12  BIG-SCREW.MIT.EDU (18.72.0.176)  76.484 ms  76.226 ms  77.748 ms
+</pre>
+
+<p>Note the vastly different paths that these two traceroutes take from host A to host B and from host B to host A, each with a different number of hops. The first traceroute shows the path from MIT to geo.net goes through Sprint Nap, an exchange point in New Jersey. This makes sense, since MIT is on the east coast and BBN is using closest exit routing. The second traceroute shows that the path from geo.net in San Francisco back to MIT goes through MAE West, an exchange point in the San Francisco Bay Area, the closest exit point for geo.net.</p>
+<br>
+<p>Now, to make the issue more confusing, the second reason why tracking down network "slowness" is tricky is the fact that in networking there is no "slow" or "fast", but instead there are bandwidth and latency, which are two different concepts that can both determine how "fast" a network is. (If you are unclear on the difference between bandwidth and latency, check out a cool paper written by Stuart Cheshire called <a href="http://rescomp.stanford.edu/~cheshire/rants/Latency.html" target="_NEW"> "It's the Latency, Stupid"</a>.</p>
+<br>
+<h3>Tracking Down Packet Loss</h3>
+<p>So now we know that bandwidth is how many packets you can stuff in your pipe and that latency is the delay, and that packet loss can adversely affect both. So, in general, when trying to track down network "slowness", you should be looking for packet loss. But this can get kind of tricky because packet loss is random. So, you might actually be getting packet loss at hop #2, but with the default 3 probes per hop, maybe all 3 will get back OK. Then at later hops you will start noticing the packet loss that really occurs at hop #2, but it might look like it's occurring at hop #3. So, it's usually better to do more than 3 probes per hop.</p>
+<br>
+<p>Let's try to debug a bad traceroute and see what might be causing the problem. So as to not try to make any other specific ISP look bad, some hostnames and IP addresses will be changed to protect the innocent. Let's say you're connected to GeoNet via a T1, and you have another office in Chicago that is connected via a different ISP. One day you notice some definite slowness in transferring files and/or logging into machines at the remote site and you want to see where the problem lies. So you decide to do some traceroutes. A traceroute from your GeoNet connected office shows you:</p>
+<pre>traceroute to chicago4.mycompany.com (342.5.133.4): 1-30 hops, 38 byte packets
+ 1  router.SanFrancisco.mycompany.com (209.0.0.278)  3.52 ms  2.75 ms  2.63 ms
+ 2  some_interconnect.geo.net (166.90.420.231)  71.5 ms  3.71 ms  3.5 ms
+ 3  SF-core1-h1.geo.net (166.90.1.17)  3.23 ms  3.20 ms  3.25 ms
+ 4  MAE-West-h0.geo.net (166.90.1.34)  7.30 ms  13.7 ms  6.33 ms
+ 5  mae-west.other-isp.net (198.32.136.256)  21.0 ms  31.4 ms  29.7 ms
+ 6  core2.SanFrancisco.other-isp.net (254.70.100.245)  21.44 ms  32.2 ms  32.5 ms
+ 7  core1.Denver.other-isp.net (254.70.40.229)  73.1 ms  *  97.4 ms
+ 8  border3.Chicaco.other-isp.net (254.70.56.23)  62.3 ms  86.23 ms 53.88 ms
+ 9  my-company-t1.Chicago.other-isp.net (254.70.111.34)  120.43 ms  95.3 ms  86.44 ms
+10  router.Chicago.other-isp.net (342.5.133.1)  *  *  112.42 ms
+11  chicago4.mycompany.com (342.5.133.4)  132.34 ms  *  104.12 ms
+</pre>
+<p>So looking at this traceroute, you can see that there is some packet loss, but it's hard to tell exactly where it starts. It could be the link between hops 6 and 7, but it's hard to know for sure. So, being an educated tracerouter, you decide to do a traceroute from Chicago back to your office in San Francisco. You get:</p>
+<pre>traceroute to sf13.mycompany.com (209.0.0.267): 1-30 hops, 38 byte packets
+ 1  router.Chicago.other-isp.net (342.5.133.1)  3.85 ms  2.64 ms  4.15 ms
+ 2  my-company-t1.Chicago.other-isp.net (254.70.111.33)  5.16 ms  3.94 ms  7.22 ms
+ 3  border3.Chicaco.other-isp.net (254.70.56.23)  3.62 ms  4.28 ms  5.15 ms
+ 4  core1.Denver.other-isp.net (254.70.40.229)  25.8 ms  27.2 ms  23.7 ms
+ 5  core2.SanFrancisco.other-isp.net (254.70.100.245)  141.0 ms  *  49.7 ms
+ 6  pb-nap.geo.net (198.32.128.24)  123.43 ms  *  76.22 ms
+ 7  SF-rt3-f0.geo.net (166.90.354.7)  *  94.12 ms  102.32 ms
+ 8  some_interconnect.geo.net (166.90.420.232)  85.24 ms  *  97.3 ms
+ 9  sf13.mycompany.com (209.0.0.267)  117.31 ms  234.42 ms  99.19 ms
+</pre>
+<p>So now you have more to go on. First of all you see that this route is an asymettric one. The first route is 11 hops and the route back is 9 hops. Now the number of hops doesn't make any significant difference in how fast your connection is, but it can make things like packet loss and latency increases appear to be occur between two hops when it really isn't there. This is because the packet loss or increase in latency might be between two hops you don't even see because the route back to you is completely different.</p>
+<br>
+<p>So now you can make an educated guess as to where the packet loss might be occurring. Based on the first traceroute, it looked like the bad link might be between core2.SanFrancisco.other-isp.net and core1.Denver.other-isp.net, and by looking at the route back in the other direction, it appears that this assumption might be correct. At this point, your best bet it to copy and paste your traceroutes and get these sent to the appropriate NOC (Network Operations Center). With this type of information, you will now have a lot better chance of tracking down the problem than if you just sent an e-mail saying "my connection to my Chicago office is slow." It also gives you a better understanding of how traffic is exchanged on the Internet.</p>
+<br>
+<h3>Summary</h3>
+<p>In summary, traceroute is a network diagnostic tool that will show you the hops your Internet traffic takes from your host to a remote location. It will also tell you how long it takes for packets to get from your host to each hop as well as if packets get lost along the way, which can be useful in tracking network problems. Since routes on the Internet are often asymmetric, it's usually a good idea to do traceroutes in both directions if possible when trying to debug network slowness. In doing so, you can provide your ISP with crucial information that can help them to fix the network problem.</p>
+<a name="_exercises"></a>
+<h3>Exercises</h3>
+<p>Here are some exercises that you can do to practice your traceroute skills and learn to interpret the output better.</p>
+<ol>
+<li>The easiest we can do is to run a traceroute to www.google.com.  Go to the <a href="http://networking.ringofsaturn.com/Tools/traceroute.php" target="_NEW">Online Traceroute Tool</a> and enter www.google.com and press enter.<br>
+<br>How many hops did it take to get there?<br>
+<br>
+Where did the traceroute originate from?<br>
+<br>Where do you think www.google.com is located at physically?<br><br></li>
+
+<li>Now, traceroute to www.disney.com and what happens?<br>
+<br>
+Does the traceroute finish or does it stall out somewhere?<br>
+<br>
+Does Disney host their own webserver?<br>
+<br>
+What ISP provides the connectivity for this website?<br><br></li>
+
+<li>For a more difficult exercise, we are going to run a traceroute using the Traceroute tool as well as <a href="http://nitrous.digex.net/" target="_NEW">nitrous.digex.net</a>.  Traceroute to www.sega.com using both tools and compare the results.  To use the tool on Digex, go to the website, click on one of the Public NAP's, enter the hostname or IP address, select Trace, and then click Submit.  If you chose the first entry, then you ran a traceroute to www.sega.com from MAE-East.<br>
+<br>
+How many hops did it take for you to reach www.sega.com from the Traceroute tool on the this site?<br>
+<br>
+How many hops did it take to get there from MAE-East?<br>
+<br>
+Does a larger amount of hops automatically indicate that there will be more delay in loading from the site?<br>
+<br>
+Which link actually does take longer(milliseconds) to reach the destination?</li>
+
+</ol>
+
+<h3>Quiz</h3>
+<p>If you have read through this article and gone through the exercises, then you should be ready to take a quiz on this to see how well you retained this knowledge.</p>
+<p><a href="http://networking.ringofsaturn.com/Tools/quizzes.cgi?Action=Take&Quizid=11">Using Traceroute Quiz</a></p>
+<p>Good Luck!</p>
+<br>
+<br>
+<div style="clear:both;">
+<hr color="#993300" noshade="" width="80%">
+</div>
+<div align="CENTER">This page was created in 0.00224 seconds</div><div align="CENTER">
+<a href="mailto:rnejdl@ringofsaturn.com">Comments and Questions</a><br><small>Last modified: July 01 2011.</small>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+
+</body></html>
